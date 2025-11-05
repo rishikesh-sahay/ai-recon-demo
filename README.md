@@ -19,7 +19,7 @@ A demonstration prototype showing how AI agents can automate penetration testing
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/ai-recon-demo.git
+   git clone https://github.com/rishikesh-sahay/ai-recon-demo.git
    cd ai-recon-demo
    
 2. Create virtual environment (recommended):
