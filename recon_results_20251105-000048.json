@@ -1,0 +1,406 @@
+{
+  "dns_agent": {
+    "target_domain": "uis.edu",
+    "dns_records": {
+      "A": [
+        "192.102.230.95"
+      ],
+      "AAAA": "Not found: The DNS response does not contain an answer to the question: uis.edu. IN AAAA",
+      "MX": [
+        "0 mx0a-00007101.pphosted.com.",
+        "0 mx0b-00007101.pphosted.com."
+      ],
+      "NS": [
+        "dns3.uis.edu.",
+        "dns1.uis.edu.",
+        "dns2.uis.edu."
+      ],
+      "TXT": [
+        "\"docusign=d7f9d0a6-751d-4ffb-8fbc-d2a4854ac0b6\"",
+        "\"google-site-verification=4t2u6KHz12x6SGPHxV-myAJSva_EjRay-RXe2siCoGw\"",
+        "\"openai-domain-verification=dv-mgnwNTPaweFiyK32zivGH7e2\"",
+        "\"bw=FvX0hHMLRxzX6oyJAOWUzgzObcKSkY1B8mbZeCG4D1Wz\"",
+        "\"fSIaYKY1cv62H9JgAdSfZ/NG+c21QPn0aIbwQxXnoIZniab39BoT9YWXOakJN2GAr0su+EC//P5lxjWoOhReWQ==\"",
+        "\"v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all\"",
+        "\"adobe-idp-site-verification=3d2caaf4-1be0-4296-8cff-aa5bee9d8aa7\"",
+        "\"amazonses:GxVAvvdbstt6+dtTjSepCHY7RtHqdeDlbtoRZhP7PYQ=\"",
+        "\"3c0lrpf7aenp9btcr7hc38t7h9\"",
+        "\"MS=ms41711862\"",
+        "\"_betterimpact-rewrite-sender\"",
+        "\"knowbe4-site-verification=ba76559bd6b6424101736f1507eb34f0\""
+      ],
+      "CNAME": "Not found: The DNS response does not contain an answer to the question: uis.edu. IN CNAME",
+      "SOA": [
+        "dns2.uis.edu. admin.uis.edu. 2025100700 3600 600 86400 3600"
+      ]
+    },
+    "whois_info": {
+      "registrar": null,
+      "creation_date": "1995-05-09 00:00:00+00:00",
+      "expiration_date": "2026-07-31 00:00:00+00:00",
+      "name_servers": null,
+      "emails": null,
+      "org": null,
+      "country": null,
+      "address": null,
+      "city": null,
+      "state": null,
+      "zipcode": null
+    },
+    "subdomains": [
+      "www.uis.edu",
+      "library.uis.edu",
+      "my.uis.edu",
+      "webmail.uis.edu",
+      "vpn.uis.edu",
+      "remote.uis.edu",
+      "media.uis.edu"
+    ],
+    "ai_analysis": {
+      "domain_characteristics": [
+        {
+          "icon": "🏛️",
+          "finding": "Established Educational Institution",
+          "explanation": "Domain registered in 1995 - 29+ years of operation indicates a well-established university with significant digital infrastructure and historical data.",
+          "implication": "High-value target with extensive digital footprint and potential legacy systems."
+        },
+        {
+          "icon": "🎓",
+          "finding": "Educational Institution Confirmed",
+          "explanation": ".edu TLD confirms this is an accredited US educational institution with specific security and compliance requirements.",
+          "implication": "Subject to FERPA regulations and educational cybersecurity frameworks."
+        }
+      ],
+      "security_posture": [
+        {
+          "icon": "🔒",
+          "finding": "SPF Record Configured",
+          "explanation": "Sender Policy Framework (SPF) prevents email spoofing by specifying authorized mail servers.",
+          "implication": "Basic email security implemented, but SPF alone is not sufficient for comprehensive protection."
+        },
+        {
+          "icon": "⚠️",
+          "finding": "DMARC Not Implemented",
+          "explanation": "DMARC (Domain-based Message Authentication) is missing, which allows potential email spoofing and phishing attacks.",
+          "implication": "High risk of email-based attacks; DMARC implementation recommended."
+        },
+        {
+          "icon": "🛡️",
+          "finding": "Enterprise Email Security (Proofpoint)",
+          "explanation": "Using Proofpoint hosted email protection - enterprise-grade security with advanced threat protection.",
+          "implication": "Sophisticated email security in place, but configuration review is still recommended."
+        }
+      ],
+      "infrastructure_insights": [
+        {
+          "icon": "🌐",
+          "finding": "Robust DNS Infrastructure",
+          "explanation": "Multiple name servers (3) provide redundancy and reliability for DNS resolution.",
+          "implication": "Resilient against DNS outages, but each server represents a potential attack surface."
+        },
+        {
+          "icon": "🏚️",
+          "finding": "Legacy IPv4-Only Infrastructure",
+          "explanation": "No IPv6 support detected, indicating potential legacy infrastructure.",
+          "implication": "Limited to IPv4 attack vectors, but may indicate outdated systems."
+        },
+        {
+          "icon": "🏗️",
+          "finding": "Distributed Infrastructure (7 subdomains)",
+          "explanation": "Multiple subdomains indicate segmented services and distributed architecture.",
+          "implication": "Larger attack surface requiring comprehensive subdomain testing."
+        }
+      ],
+      "attack_surface": [
+        {
+          "icon": "📧",
+          "finding": "Email Infrastructure Exposure",
+          "explanation": "MX records reveal email server infrastructure that can be targeted for phishing, spoofing, or direct attacks.",
+          "implication": "Email servers are prime targets for credential harvesting and business email compromise."
+        },
+        {
+          "icon": "🌐",
+          "finding": "Public Web Presence",
+          "explanation": "www subdomain indicates public-facing web services accessible to attackers.",
+          "implication": "Web applications are common entry points for attacks like SQL injection, XSS, and CSRF."
+        },
+        {
+          "icon": "📨",
+          "finding": "Email Services Detected",
+          "explanation": "Subdomain \"webmail.uis.edu\" indicates email services with specific security requirements.",
+          "implication": "Potential risks: Credential theft, Phishing attacks"
+        },
+        {
+          "icon": "🔐",
+          "finding": "Remote Access Detected",
+          "explanation": "Subdomain \"vpn.uis.edu\" indicates remote access with specific security requirements.",
+          "implication": "Potential risks: Credential stuffing, VPN vulnerabilities"
+        }
+      ],
+      "business_context": [
+        {
+          "icon": "🎓",
+          "aspect": "Institution Type",
+          "details": "Higher Education University",
+          "implications": [
+            "Large user base (students, faculty, staff)",
+            "Diverse technology needs across departments",
+            "Research data and intellectual property concerns",
+            "Regulatory compliance (FERPA, GLBA)"
+          ]
+        },
+        {
+          "icon": "🛠️",
+          "aspect": "Technology Ecosystem",
+          "details": "Integrated Enterprise Services",
+          "implications": [
+            "Third-party services: Electronic Signature Platform, Google Workspace/Cloud Services, AI/ML Services Integration, Adobe Creative Cloud/Experience Cloud, Amazon Simple Email Service, Security Awareness Training Platform",
+            "Expanded attack surface through service integrations",
+            "Dependency on external service providers",
+            "Complex identity and access management"
+          ]
+        }
+      ],
+      "risk_assessment": {
+        "overall_score": 35,
+        "risk_level": "High",
+        "factors": [
+          {
+            "risk": "Email Spoofing Vulnerability",
+            "severity": "High",
+            "description": "Missing DMARC allows attackers to spoof emails from your domain",
+            "impact": "Phishing attacks, reputation damage, financial fraud"
+          },
+          {
+            "risk": "Email Service Exposure",
+            "severity": "Medium",
+            "description": "Publicly exposed email infrastructure",
+            "impact": "Target for email-based attacks and service disruption"
+          }
+        ],
+        "mitigation_recommendations": [
+          "Implement DMARC policy with monitoring",
+          "Email security monitoring and access controls"
+        ]
+      },
+      "recommendations": [
+        {
+          "priority": "CRITICAL",
+          "recommendation": "Implement DMARC Email Security",
+          "actions": [
+            "Deploy DMARC policy starting with monitoring mode (p=none)",
+            "Analyze DMARC reports for email traffic patterns",
+            "Gradually enforce DMARC policy (p=quarantine -> p=reject)",
+            "Monitor for email delivery issues during enforcement"
+          ],
+          "rationale": "Missing DMARC exposes the organization to email spoofing and phishing attacks"
+        },
+        {
+          "priority": "HIGH",
+          "recommendation": "Comprehensive Web Application Testing",
+          "actions": [
+            "Conduct authenticated and unauthenticated web vulnerability scanning",
+            "Perform manual testing for business logic flaws",
+            "Test for OWASP Top 10 vulnerabilities",
+            "Validate input sanitization and output encoding"
+          ],
+          "rationale": "Public web services are primary attack vectors for external threats"
+        },
+        {
+          "priority": "MEDIUM",
+          "recommendation": "Third-party Service Security Review",
+          "actions": [
+            "Audit OAuth applications and API integrations",
+            "Review service-specific security configurations",
+            "Validate access controls for integrated services",
+            "Monitor for suspicious activity across platforms"
+          ],
+          "rationale": "Multiple third-party services expand the attack surface"
+        },
+        {
+          "priority": "MEDIUM",
+          "recommendation": "Subdomain Security Assessment",
+          "actions": [
+            "Comprehensive subdomain discovery and enumeration",
+            "Test each subdomain for unique vulnerabilities",
+            "Check for subdomain takeover opportunities",
+            "Validate SSL/TLS configurations across all subdomains"
+          ],
+          "rationale": "Distributed infrastructure requires comprehensive security coverage"
+        }
+      ],
+      "correlation_analysis": [
+        {
+          "type": "Security Gap",
+          "finding": "Advanced email protection with basic configuration",
+          "explanation": "Enterprise Proofpoint email security is deployed but missing DMARC policy creates a significant security gap.",
+          "recommendation": "Complete email security stack by implementing DMARC alongside existing enterprise protection."
+        },
+        {
+          "type": "Technology Ecosystem",
+          "finding": "Comprehensive enterprise service integration",
+          "explanation": "Multiple enterprise services detected: Google Workspace, Adobe Cloud, Security Training indicating mature digital transformation.",
+          "recommendation": "Implement centralized identity management and monitor for service-specific vulnerabilities."
+        }
+      ]
+    },
+    "security_insights": [
+      {
+        "icon": "🔍",
+        "insight": "Google Workspace Integration",
+        "details": "Enterprise productivity and collaboration suite",
+        "security_implication": "Centralized identity management required, potential for OAuth abuse"
+      },
+      {
+        "icon": "🤖",
+        "insight": "AI Services Integration",
+        "details": "OpenAI API or enterprise AI services",
+        "security_implication": "API key protection, AI model security, data privacy considerations"
+      },
+      {
+        "icon": "🎨",
+        "insight": "Adobe Experience Cloud",
+        "details": "Digital experience and creative cloud platform",
+        "security_implication": "Creative asset protection, access control for design resources"
+      },
+      {
+        "icon": "📚",
+        "insight": "Security Awareness Training",
+        "details": "KnowBe4 phishing simulation and training platform",
+        "security_implication": "Indicates proactive security culture, but platform itself needs securing"
+      }
+    ],
+    "attack_vectors": [
+      {
+        "category": "Email Security",
+        "vectors": [
+          {
+            "vector": "SPF Record Exploitation",
+            "description": "Attackers can test SPF record limitations or use allowed third-party services",
+            "techniques": [
+              "SPF record parsing",
+              "Domain spoofing through allowed senders"
+            ]
+          },
+          {
+            "vector": "Phishing Campaigns",
+            "description": "Lack of DMARC allows domain spoofing for convincing phishing emails",
+            "techniques": [
+              "CEO fraud",
+              "Credential harvesting",
+              "Malware distribution"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "DNS & Infrastructure",
+        "vectors": [
+          {
+            "vector": "Subdomain Enumeration & Takeover",
+            "description": "Unused or misconfigured subdomains can be hijacked",
+            "techniques": [
+              "Subdomain brute-forcing",
+              "CNAME record exploitation"
+            ]
+          },
+          {
+            "vector": "DNS Cache Poisoning",
+            "description": "Attackers can manipulate DNS resolution to redirect traffic",
+            "techniques": [
+              "DNS spoofing",
+              "Man-in-the-middle attacks"
+            ]
+          }
+        ]
+      },
+      {
+        "category": "Third-party Services",
+        "vectors": [
+          {
+            "vector": "OAuth & SSO Exploitation",
+            "description": "Compromised third-party services can provide access to main domain",
+            "techniques": [
+              "OAuth token theft",
+              "SSO configuration abuse"
+            ]
+          },
+          {
+            "vector": "API Endpoint Discovery",
+            "description": "Exposed API endpoints through subdomains or service integrations",
+            "techniques": [
+              "API endpoint enumeration",
+              "Parameter fuzzing"
+            ]
+          }
+        ]
+      }
+    ],
+    "risk_assessment": {
+      "overall_score": 35,
+      "risk_level": "High",
+      "factors": [
+        {
+          "risk": "Email Spoofing Vulnerability",
+          "severity": "High",
+          "description": "Missing DMARC allows attackers to spoof emails from your domain",
+          "impact": "Phishing attacks, reputation damage, financial fraud"
+        },
+        {
+          "risk": "Email Service Exposure",
+          "severity": "Medium",
+          "description": "Publicly exposed email infrastructure",
+          "impact": "Target for email-based attacks and service disruption"
+        }
+      ],
+      "mitigation_recommendations": [
+        "Implement DMARC policy with monitoring",
+        "Email security monitoring and access controls"
+      ]
+    },
+    "business_context": [
+      {
+        "icon": "🎓",
+        "aspect": "Institution Type",
+        "details": "Higher Education University",
+        "implications": [
+          "Large user base (students, faculty, staff)",
+          "Diverse technology needs across departments",
+          "Research data and intellectual property concerns",
+          "Regulatory compliance (FERPA, GLBA)"
+        ]
+      },
+      {
+        "icon": "🛠️",
+        "aspect": "Technology Ecosystem",
+        "details": "Integrated Enterprise Services",
+        "implications": [
+          "Third-party services: Electronic Signature Platform, Google Workspace/Cloud Services, AI/ML Services Integration, Adobe Creative Cloud/Experience Cloud, Amazon Simple Email Service, Security Awareness Training Platform",
+          "Expanded attack surface through service integrations",
+          "Dependency on external service providers",
+          "Complex identity and access management"
+        ]
+      }
+    ]
+  },
+  "port_agent": {
+    "target": "uis.edu",
+    "open_ports": [
+      {
+        "port": 80,
+        "service": "HTTP",
+        "state": "open"
+      },
+      {
+        "port": 443,
+        "service": "HTTPS",
+        "state": "open"
+      }
+    ],
+    "scan_summary": {
+      "total_scanned": 8,
+      "open_ports_found": 2,
+      "success_rate": "25.0%"
+    }
+  }
+}
