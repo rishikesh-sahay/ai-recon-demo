@@ -1,0 +1,106 @@
+{
+  "dns_agent": {
+    "target_domain": "uis.edu",
+    "dns_records": {
+      "A": [
+        "192.102.230.95"
+      ],
+      "AAAA": "Not found: The DNS response does not contain an answer to the question: uis.edu. IN AAAA",
+      "MX": [
+        "0 mx0b-00007101.pphosted.com.",
+        "0 mx0a-00007101.pphosted.com."
+      ],
+      "NS": [
+        "dns1.uis.edu.",
+        "dns2.uis.edu.",
+        "dns3.uis.edu."
+      ],
+      "TXT": [
+        "\"v=spf1 include:%{ir}.%{v}.%{d}.spf.has.pphosted.com ~all\"",
+        "\"bw=FvX0hHMLRxzX6oyJAOWUzgzObcKSkY1B8mbZeCG4D1Wz\"",
+        "\"google-site-verification=4t2u6KHz12x6SGPHxV-myAJSva_EjRay-RXe2siCoGw\"",
+        "\"openai-domain-verification=dv-mgnwNTPaweFiyK32zivGH7e2\"",
+        "\"knowbe4-site-verification=ba76559bd6b6424101736f1507eb34f0\"",
+        "\"fSIaYKY1cv62H9JgAdSfZ/NG+c21QPn0aIbwQxXnoIZniab39BoT9YWXOakJN2GAr0su+EC//P5lxjWoOhReWQ==\"",
+        "\"_betterimpact-rewrite-sender\"",
+        "\"adobe-idp-site-verification=3d2caaf4-1be0-4296-8cff-aa5bee9d8aa7\"",
+        "\"3c0lrpf7aenp9btcr7hc38t7h9\"",
+        "\"amazonses:GxVAvvdbstt6+dtTjSepCHY7RtHqdeDlbtoRZhP7PYQ=\"",
+        "\"MS=ms41711862\"",
+        "\"docusign=d7f9d0a6-751d-4ffb-8fbc-d2a4854ac0b6\""
+      ],
+      "CNAME": "Not found: The DNS response does not contain an answer to the question: uis.edu. IN CNAME"
+    },
+    "whois_info": {
+      "registrar": null,
+      "creation_date": "1995-05-09 00:00:00+00:00",
+      "expiration_date": "2026-07-31 00:00:00+00:00",
+      "name_servers": null,
+      "emails": null,
+      "org": null,
+      "country": null
+    },
+    "subdomains": [
+      "www.uis.edu"
+    ],
+    "ai_analysis": {
+      "domain_characteristics": [
+        "🏛️  Established organization (domain registered in 1990s)"
+      ],
+      "security_posture": [
+        "🔒 SPF configured - email spoofing protection",
+        "⚠️  DMARC not found - consider implementing"
+      ],
+      "infrastructure_insights": [
+        "🌐 Robust DNS infrastructure (multiple name servers)",
+        "🔗 IPv6 not detected - legacy infrastructure",
+        "🏗️  Simple infrastructure"
+      ],
+      "attack_surface": [
+        "📧 Email servers present - phishing/social engineering vector"
+      ],
+      "recommendations": [
+        "📧 **Priority**: Email security assessment",
+        "🛡️  Test for open relays on SMTP servers",
+        "📨 Conduct phishing simulation exercises",
+        "🔐 **Standard**: DNS security checks",
+        "📊 Check for DNS zone transfer vulnerabilities",
+        "🛡️  Verify DNSSEC implementation (if applicable)"
+      ]
+    },
+    "security_insights": [
+      "🔍 Google services integration detected",
+      "🤖 OpenAI services integration detected",
+      "📚 KnowBe4 security awareness platform detected",
+      "🎨 Adobe services integration detected",
+      "📧 Proofpoint enterprise email protection detected"
+    ],
+    "attack_vectors": [
+      "📧 **Email Attacks**: Phishing, business email compromise",
+      "🛡️  **Email Security**: SPF/DKIM/DMARC bypass attempts",
+      "🏗️  **Subdomain Takeover**: Check for orphaned subdomains",
+      "🔍 **Information Disclosure**: Subdomain enumeration",
+      "🎯 **DNS Attacks**: Zone transfer, cache poisoning, DDoS"
+    ]
+  },
+  "port_agent": {
+    "target": "uis.edu",
+    "open_ports": [
+      {
+        "port": 80,
+        "service": "HTTP",
+        "state": "open"
+      },
+      {
+        "port": 443,
+        "service": "HTTPS",
+        "state": "open"
+      }
+    ],
+    "scan_summary": {
+      "total_scanned": 8,
+      "open_ports_found": 2,
+      "success_rate": "25.0%"
+    }
+  }
+}
